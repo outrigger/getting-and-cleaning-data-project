@@ -5,6 +5,11 @@
 ## Function to download dataset and unzip it to working directory
 downloadDataset <- function() {
   url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  
+  if(!file.exists("./data")) {
+    dir.create("./data")
+  }
+  
   downloadDirectory <- "data"
   
   zippedDataset <- file.path(downloadDirectory, paste("getdata-projectfiles-UCI HAR Dataset.zip", sep = "/"))
@@ -121,3 +126,6 @@ names(tidyColumnMeans)[-c(1,2)] <- paste0("Average-", names(tidyColumnMeans)[-c(
 
 ## Write to a text file
 write.table(tidyColumnMeans, "tidyDataset.txt", row.names = FALSE)
+
+## Check to ensure that tidyDataset.txt can be read properly
+read.table("tidyDataset.txt", header = TRUE)

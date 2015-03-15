@@ -20,9 +20,8 @@ There are a total of 4 main files in this GitHub Repository.
 	*This file contains the final output of the `run_analysis.R` script (a tidy data set with the average of each variable for each activity and each subject).*
 
 ## Instructions
-1. Set the working directory.
-2. Create a new folder within this working directory called `data`.
-3. Run the code within the `run_analysis.R` script.
+1. Set your preferred working directory in RStudio.
+2. Run the code within the `run_analysis.R` script.
 
 ### Dependencies
 *  This project makes use of the [`plyr`](http://cran.r-project.org/web/packages/plyr/index.html) library.
